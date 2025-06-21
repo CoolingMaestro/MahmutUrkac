@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güvenlik Rehberi - Yangın Güvenliği</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .text-danger {
+            color: #e53e3e;
+        }
+        .bg-danger {
+            background-color: #e53e3e;
+        }
+        .bg-danger-light {
+            background-color: rgba(229, 62, 62, 0.1);
+        }
+        .border-danger {
+            border-color: #e53e3e;
+        }
+    </style>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#e53e3e',secondary:'#f6ad55'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="https://readdy.ai/home/ff76124c-c8d2-40e3-9232-49fc71c83c57/5eb09d93-0072-41b8-a6fe-0e379f6470c3" data-readdy="true" class="flex items-center text-primary font-semibold">
+                    <div class="w-8 h-8 flex items-center justify-center mr-2">
+                        <i class="ri-arrow-left-line ri-lg"></i>
+                    </div>
+                    <span>Ana Sayfa</span>
+                </a>
+                <h1 class="text-xl font-bold ml-6 hidden md:block">Güvenlik Rehberi</h1>
+            </div>
+            
+            <div class="flex items-center">
+                <div class="relative">
+                    <button id="languageSelector" class="flex items-center text-gray-700 px-3 py-2 rounded-button border border-gray-300 hover:bg-gray-100 whitespace-nowrap">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-global-line"></i>
+                        </div>
+                        <span>Türkçe</span>
+                        <div class="w-5 h-5 flex items-center justify-center ml-2">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+                    <div id="languageMenu" class="absolute right-0 mt-2 w-48 bg-white rounded shadow-lg hidden">
+                        <ul class="py-1">
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                Türkçe
+                            </a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-2 opacity-0">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                English
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div style="background-image: url('https://readdy.ai/api/search-image?query=A%20dramatic%20image%20showing%20fire%20safety%20equipment%20including%20fire%20extinguishers%2C%20smoke%20detectors%2C%20and%20emergency%20exit%20signs%20arranged%20against%20a%20red-tinted%20background%20with%20subtle%20smoke%20effects.%20The%20image%20should%20convey%20urgency%20and%20safety%20preparedness%20with%20professional%20lighting%20and%20composition.&width=1600&height=600&seq=1&orientation=landscape');" class="bg-cover bg-center h-64 relative">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h1 class="text-4xl font-bold mb-4">Yangın Güvenliği Rehberi</h1>
+                    <p class="text-xl max-w-2xl mx-auto">Ev ve işyerinde yangın güvenliği için kapsamlı bilgiler ve hayat kurtaran önlemler</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+        <!-- Sidebar Navigation -->
+        <aside class="md:w-1/4 mb-8 md:mb-0 md:pr-8">
+            <div class="bg-white rounded shadow-sm p-4 sticky top-24">
+                <h2 class="text-lg font-semibold mb-4 pb-2 border-b border-gray-200">İçindekiler</h2>
+                <nav>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#risk-degerlendirmesi" class="flex items-center text-gray-700 hover:text-primary py-1">
+                                <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                    <i class="ri-clipboard-line"></i>
+                                </div>
+                                <span>Risk Değerlendirmesi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#onlemler" class="flex items-center text-gray-700 hover:text-primary py-1">
+                                <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                    <i class="ri-shield-check-line"></i>
+                                </div>
+                                <span>Yangın Öncesi Önlemler</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#yangin-aninda" class="flex items-center text-gray-700 hover:text-primary py-1">
+                                <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                    <i class="ri-fire-line"></i>
+                                </div>
+                                <span>Yangın Anında Yapılacaklar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#yangin-sondurucu" class="flex items-center text-gray-700 hover:text-primary py-1">
+                                <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                    <i class="ri-fire-extinguisher-line"></i>
+                                </div>
+                                <span>Yangın Söndürücü Kullanımı</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tahliye-planlari" class="flex items-center text-gray-700 hover:text-primary py-1">
+                                <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                    <i class="ri-route-line"></i>
+                                </div>
+                                <span>Tahliye Planları</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ozel-durumlar" class="flex items-center text-gray-700 hover:text-primary py-1">
+                                <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                    <i class="ri-alert-line"></i>
+                                </div>
+                                <span>Özel Durumlar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                    <a href="#" class="flex items-center justify-center bg-primary text-white py-2 px-4 rounded-button hover:bg-red-700 transition duration-200 whitespace-nowrap">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-download-line"></i>
+                        </div>
+                        <span>Tüm Rehberi İndir</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="md:w-3/4">
+            <!-- Risk Değerlendirmesi -->
+            <section id="risk-degerlendirmesi" class="mb-12 bg-white rounded shadow-sm overflow-hidden">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h2 class="text-2xl font-semibold flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center mr-3">
+                            <i class="ri-clipboard-line ri-lg"></i>
+                        </div>
+                        Yangın Risk Değerlendirmesi
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row gap-6 mb-6">
+                        <div class="md:w-1/2">
+                            <p class="text-gray-700 mb-4">Yangın risklerini belirlemek ve önlem almak, can ve mal güvenliği için hayati önem taşır. Ev veya işyerinizde aşağıdaki risk değerlendirme adımlarını uygulayın:</p>
+                            
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Risk Değerlendirme Adımları:</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">1</span>
+                                    </div>
+                                    <span class="text-gray-700">Elektrik tesisatını kontrol edin (yıpranmış kablolar, aşırı yüklenmiş prizler)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">2</span>
+                                    </div>
+                                    <span class="text-gray-700">Isıtma sistemlerini ve cihazlarını inceleyin</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">3</span>
+                                    </div>
+                                    <span class="text-gray-700">Mutfak alanlarındaki yangın risklerini değerlendirin</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">4</span>
+                                    </div>
+                                    <span class="text-gray-700">Yanıcı ve patlayıcı maddelerin depolanmasını kontrol edin</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">5</span>
+                                    </div>
+                                    <span class="text-gray-700">Acil çıkış yollarını ve tahliye planlarını gözden geçirin</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://readdy.ai/api/search-image?query=A%20detailed%20image%20showing%20a%20person%20conducting%20a%20fire%20safety%20inspection%20in%20a%20home%2C%20checking%20smoke%20detectors%2C%20electrical%20outlets%2C%20and%20fire%20hazards.%20The%20image%20should%20look%20professional%20and%20educational%2C%20with%20good%20lighting%20showing%20clear%20details%20of%20the%20inspection%20process.&width=600&height=400&seq=2&orientation=landscape" alt="Yangın risk değerlendirmesi" class="w-full h-64 object-cover rounded">
+                            
+                            <div class="mt-6 bg-danger-light border-l-4 border-primary p-4 rounded-r">
+                                <h4 class="font-semibold text-gray-800 mb-2">Önemli Bilgi</h4>
+                                <p class="text-gray-700">Risk değerlendirmesini en az yılda bir kez ve her büyük değişiklikten sonra tekrarlayın. Profesyonel bir yangın güvenliği uzmanından destek almak, gözden kaçan riskleri belirlemenize yardımcı olabilir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 border-t border-gray-200 pt-6">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Risk Değerlendirme Kontrol Listesi</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-2">Elektrik Güvenliği</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                            <i class="ri-checkbox-blank-circle-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Hasarlı kablo ve prizlerin kontrolü</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                            <i class="ri-checkbox-blank-circle-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Elektrik panolarının temizliği</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                            <i class="ri-checkbox-blank-circle-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Aşırı yüklenmiş prizlerin tespiti</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-2">Isıtma ve Mutfak</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                            <i class="ri-checkbox-blank-circle-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Isıtıcıların yanıcı maddelerden uzaklığı</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                            <i class="ri-checkbox-blank-circle-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Ocak ve fırın temizliği</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                                            <i class="ri-checkbox-blank-circle-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Bacaların düzenli temizliği</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-end">
+                        <a href="#" class="flex items-center text-primary hover:text-red-700">
+                            <span>Risk Değerlendirme Formunu İndir</span>
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-download-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Yangın Öncesi Önlemler -->
+            <section id="onlemler" class="mb-12 bg-white rounded shadow-sm overflow-hidden">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h2 class="text-2xl font-semibold flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center mr-3">
+                            <i class="ri-shield-check-line ri-lg"></i>
+                        </div>
+                        Yangın Öncesi Önlemler
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row gap-6 mb-6">
+                        <div class="md:w-1/2">
+                            <p class="text-gray-700 mb-4">Yangın riskini azaltmak için alınabilecek önlemler hayat kurtarıcı olabilir. Aşağıdaki önleyici tedbirleri uygulamak, yangın riskini önemli ölçüde azaltacaktır:</p>
+                            
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Temel Önlemler:</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                        <i class="ri-check-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-gray-700">Her katta ve yatak odalarının yakınında duman dedektörleri kurun</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                        <i class="ri-check-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-gray-700">Uygun yangın söndürücüleri stratejik noktalara yerleştirin</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                        <i class="ri-check-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-gray-700">Elektrik tesisatını düzenli olarak kontrol ettirin</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                        <i class="ri-check-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-gray-700">Yanıcı maddeleri ısı kaynaklarından uzak tutun</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                        <i class="ri-check-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-gray-700">Aile veya çalışanlarla düzenli yangın tatbikatları yapın</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://readdy.ai/api/search-image?query=A%20well-lit%20image%20showing%20various%20fire%20prevention%20equipment%20including%20smoke%20detectors%2C%20fire%20extinguishers%2C%20and%20fire%20blankets%20arranged%20in%20a%20home%20setting.%20The%20image%20should%20look%20clean%2C%20modern%20and%20educational%20with%20good%20lighting%20showing%20the%20equipment%20clearly.&width=600&height=400&seq=3&orientation=landscape" alt="Yangın önleme ekipmanları" class="w-full h-64 object-cover rounded">
+                            
+                            <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
+                                <h4 class="font-semibold text-gray-800 mb-2">Bakım ve Kontrol</h4>
+                                <p class="text-gray-700">Duman dedektörlerini ayda bir test edin ve pillerini yılda en az bir kez değiştirin. Yangın söndürücülerin basınç göstergelerini düzenli olarak kontrol edin ve son kullanma tarihlerini takip edin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 border-t border-gray-200 pt-6">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Özel Alanlar İçin Önlemler</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-kitchen-line"></i>
+                                    </div>
+                                    Mutfak Güvenliği
+                                </h4>
+                                <ul class="space-y-2 ml-8">
+                                    <li class="text-gray-700">Pişirme sırasında mutfağı asla terk etmeyin</li>
+                                    <li class="text-gray-700">Ocak çevresini yanıcı maddelerden temizleyin</li>
+                                    <li class="text-gray-700">Yağ yangınları için uygun söndürücü bulundurun</li>
+                                    <li class="text-gray-700">Elektrikli cihazları kullanmadığınızda fişten çekin</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-plug-line"></i>
+                                    </div>
+                                    Elektrik Güvenliği
+                                </h4>
+                                <ul class="space-y-2 ml-8">
+                                    <li class="text-gray-700">Prizleri aşırı yüklemeyin</li>
+                                    <li class="text-gray-700">Hasarlı kabloları hemen değiştirin</li>
+                                    <li class="text-gray-700">Uzatma kablolarını geçici olarak kullanın</li>
+                                    <li class="text-gray-700">Elektrik panolarının önünü temiz tutun</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-home-line"></i>
+                                    </div>
+                                    Ev İçi Güvenlik
+                                </h4>
+                                <ul class="space-y-2 ml-8">
+                                    <li class="text-gray-700">Mum ve açık alevleri gözetimsiz bırakmayın</li>
+                                    <li class="text-gray-700">Sigara içilen alanlarda dikkatli olun</li>
+                                    <li class="text-gray-700">Isıtıcıları yanıcı maddelerden uzak tutun</li>
+                                    <li class="text-gray-700">Çocukları kibrit ve çakmaktan uzak tutun</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-building-line"></i>
+                                    </div>
+                                    İşyeri Güvenliği
+                                </h4>
+                                <ul class="space-y-2 ml-8">
+                                    <li class="text-gray-700">Acil çıkış yollarını her zaman açık tutun</li>
+                                    <li class="text-gray-700">Yangın alarm sistemlerini düzenli test edin</li>
+                                    <li class="text-gray-700">Çalışanlara yangın eğitimi verin</li>
+                                    <li class="text-gray-700">Tehlikeli maddeleri uygun şekilde depolayın</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-end">
+                        <a href="#" class="flex items-center text-primary hover:text-red-700">
+                            <span>Yangın Önleme Kontrol Listesini İndir</span>
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-download-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Yangın Anında Yapılacaklar -->
+            <section id="yangin-aninda" class="mb-12 bg-white rounded shadow-sm overflow-hidden">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h2 class="text-2xl font-semibold flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center mr-3">
+                            <i class="ri-fire-line ri-lg"></i>
+                        </div>
+                        Yangın Anında Yapılacaklar
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row gap-6 mb-6">
+                        <div class="md:w-1/2">
+                            <p class="text-gray-700 mb-4">Yangın anında doğru hareket etmek hayat kurtarır. Panik yapmadan ve hızlı düşünerek aşağıdaki adımları izleyin:</p>
+                            
+                            <div class="bg-danger-light p-4 rounded mb-6">
+                                <h3 class="text-lg font-semibold mb-2 text-gray-800">Acil Durum Adımları:</h3>
+                                <ol class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="text-sm">1</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Alarmı Çalıştırın</span>
+                                            <p class="text-gray-700 text-sm mt-1">Yangın alarmını çalıştırın ve yüksek sesle "Yangın var!" diye bağırın.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="text-sm">2</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">İtfaiyeyi Arayın</span>
+                                            <p class="text-gray-700 text-sm mt-1">Güvenli bir yerden 112'yi arayarak yangını bildirin.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="text-sm">3</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Tahliye Edin</span>
+                                            <p class="text-gray-700 text-sm mt-1">Binayı hızla ve güvenli şekilde tahliye edin, asansörü kullanmayın.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="text-sm">4</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Küçük Yangınla Mücadele</span>
+                                            <p class="text-gray-700 text-sm mt-1">Yangın küçükse ve güvenliyse, uygun yangın söndürücü ile müdahale edin.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="text-sm">5</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Buluşma Noktasına Gidin</span>
+                                            <p class="text-gray-700 text-sm mt-1">Önceden belirlenmiş buluşma noktasında toplanın ve yoklama yapın.</p>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://readdy.ai/api/search-image?query=A%20clear%2C%20instructional%20image%20showing%20a%20person%20demonstrating%20the%20proper%20way%20to%20evacuate%20during%20a%20fire%20emergency%2C%20crouching%20low%20to%20avoid%20smoke%2C%20and%20moving%20towards%20an%20emergency%20exit.%20The%20image%20should%20have%20good%20lighting%20and%20look%20educational%20and%20professional.&width=600&height=400&seq=4&orientation=landscape" alt="Yangın anında tahliye" class="w-full h-64 object-cover rounded">
+                            
+                            <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r">
+                                <h4 class="font-semibold text-gray-800 mb-2">Hayati Bilgiler</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-yellow-600">
+                                            <i class="ri-alert-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Dumanlı ortamda eğilerek veya sürünerek ilerleyin</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-yellow-600">
+                                            <i class="ri-alert-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Kapıları açmadan önce sıcaklığını kontrol edin</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-yellow-600">
+                                            <i class="ri-alert-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Asla yangın olan binaya geri dönmeyin</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 border-t border-gray-200 pt-6">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Özel Durumlarda Yapılacaklar</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded p-4">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-door-closed-line"></i>
+                                    </div>
+                                    Çıkış Yolu Kapalıysa
+                                </h4>
+                                <ul class="space-y-2 ml-8 text-gray-700">
+                                    <li>Kapı altlarını ıslak havlu ile kapatın</li>
+                                    <li>Pencereye yakın durun ve yardım isteyin</li>
+                                    <li>Parlak renkli bir şey sallayarak dikkat çekin</li>
+                                    <li>112'yi arayarak konumunuzu bildirin</li>
+                                </ul>
+                            </div>
+                            <div class="border border-gray-200 rounded p-4">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-t-shirt-line"></i>
+                                    </div>
+                                    Kıyafetiniz Alev Alırsa
+                                </h4>
+                                <ul class="space-y-2 ml-8 text-gray-700">
+                                    <li>Durun, yere yatın ve yuvarlanın</li>
+                                    <li>Yüzünüzü ellerinizle koruyun</li>
+                                    <li>Alevler sönene kadar yuvarlanmaya devam edin</li>
+                                    <li>Soğuk su ile yanık bölgeyi soğutun</li>
+                                </ul>
+                            </div>
+                            <div class="border border-gray-200 rounded p-4">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-smoke-line"></i>
+                                    </div>
+                                    Dumanlı Ortamda
+                                </h4>
+                                <ul class="space-y-2 ml-8 text-gray-700">
+                                    <li>Islak bir bez ile ağzınızı ve burnunuzu kapatın</li>
+                                    <li>Yere yakın eğilerek veya sürünerek ilerleyin</li>
+                                    <li>Duvarları takip ederek çıkışı bulmaya çalışın</li>
+                                    <li>Mümkünse ışık kaynağı kullanın</li>
+                                </ul>
+                            </div>
+                            <div class="border border-gray-200 rounded p-4">
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-first-aid-kit-line"></i>
+                                    </div>
+                                    Yaralı Varsa
+                                </h4>
+                                <ul class="space-y-2 ml-8 text-gray-700">
+                                    <li>Kendi güvenliğinizi sağlayın</li>
+                                    <li>Yaralıyı güvenli bir alana taşıyın</li>
+                                    <li>Temel ilk yardım uygulayın</li>
+                                    <li>Sağlık ekiplerini bilgilendirin</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-end">
+                        <a href="#" class="flex items-center text-primary hover:text-red-700">
+                            <span>Acil Durum Kartını İndir</span>
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-download-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Yangın Söndürücü Kullanımı -->
+            <section id="yangin-sondurucu" class="mb-12 bg-white rounded shadow-sm overflow-hidden">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h2 class="text-2xl font-semibold flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center mr-3">
+                            <i class="ri-fire-extinguisher-line ri-lg"></i>
+                        </div>
+                        Yangın Söndürücü Kullanımı
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row gap-6 mb-6">
+                        <div class="md:w-1/2">
+                            <p class="text-gray-700 mb-4">Yangın söndürücüler, küçük yangınları kontrol altına almak için hayati önem taşır. Doğru kullanım için "PASS" tekniğini hatırlayın:</p>
+                            
+                            <div class="bg-gray-50 p-5 rounded mb-6">
+                                <h3 class="text-lg font-semibold mb-4 text-gray-800">PASS Tekniği:</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 flex items-center justify-center mr-3 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="font-bold">P</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Pull (Çek)</span>
+                                            <p class="text-gray-700 mt-1">Emniyet pimini çekin.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 flex items-center justify-center mr-3 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="font-bold">A</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Aim (Hedefle)</span>
+                                            <p class="text-gray-700 mt-1">Hortumu yangının tabanına doğrultun.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 flex items-center justify-center mr-3 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="font-bold">S</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Squeeze (Sık)</span>
+                                            <p class="text-gray-700 mt-1">Kolu sıkarak söndürücüyü çalıştırın.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 flex items-center justify-center mr-3 bg-primary text-white rounded-full flex-shrink-0">
+                                            <span class="font-bold">S</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-medium text-gray-800">Sweep (Süpür)</span>
+                                            <p class="text-gray-700 mt-1">Hortumu yangının tabanında bir süpürge gibi sağa sola hareket ettirin.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://readdy.ai/api/search-image?query=A%20clear%20instructional%20image%20showing%20a%20person%20demonstrating%20the%20proper%20PASS%20technique%20for%20using%20a%20fire%20extinguisher%2C%20with%20the%20person%20aiming%20the%20extinguisher%20at%20the%20base%20of%20a%20small%20fire.%20The%20image%20should%20be%20well-lit%20and%20educational%20in%20nature.&width=600&height=400&seq=5&orientation=landscape" alt="Yangın söndürücü kullanımı" class="w-full h-64 object-cover rounded">
+                            
+                            <div class="mt-6 bg-danger-light border-l-4 border-primary p-4 rounded-r">
+                                <h4 class="font-semibold text-gray-800 mb-2">Güvenlik Uyarıları</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                            <i class="ri-alert-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Yangın söndürücüyü sadece küçük yangınlarda kullanın</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                            <i class="ri-alert-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Her zaman kendiniz ile yangın arasında kaçış yolu bırakın</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-primary">
+                                            <i class="ri-alert-line"></i>
+                                        </div>
+                                        <span class="text-gray-700">Yangın büyükse veya kontrol edilemiyorsa, hemen tahliye edin</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 border-t border-gray-200 pt-6">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Yangın Söndürücü Türleri</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-3 px-4 bg-gray-50 text-left text-gray-700 font-semibold border-b">Söndürücü Tipi</th>
+                                        <th class="py-3 px-4 bg-gray-50 text-left text-gray-700 font-semibold border-b">Uygun Olduğu Yangın Türü</th>
+                                        <th class="py-3 px-4 bg-gray-50 text-left text-gray-700 font-semibold border-b">Kullanım Alanı</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b border-gray-200">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center mr-2 bg-red-100 text-primary rounded-full">
+                                                    <span class="font-bold">A</span>
+                                                </div>
+                                                <span class="font-medium">Su Bazlı</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Katı madde yangınları (ahşap, kağıt, kumaş)</td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Ofisler, evler, kütüphaneler</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b border-gray-200">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center mr-2 bg-red-100 text-primary rounded-full">
+                                                    <span class="font-bold">B</span>
+                                                </div>
+                                                <span class="font-medium">Köpük/CO₂</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Yanıcı sıvı yangınları (yağ, benzin)</td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Mutfaklar, garajlar, laboratuvarlar</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b border-gray-200">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center mr-2 bg-red-100 text-primary rounded-full">
+                                                    <span class="font-bold">C</span>
+                                                </div>
+                                                <span class="font-medium">Kuru Kimyevi Toz</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Elektrikli cihaz yangınları</td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Elektrik panoları, bilgisayar odaları</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 border-b border-gray-200">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 flex items-center justify-center mr-2 bg-red-100 text-primary rounded-full">
+                                                    <span class="font-bold">K</span>
+                                                </div>
+                                                <span class="font-medium">Sıvı Kimyasal</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Pişirme yağı yangınları</td>
+                                        <td class="py-3 px-4 border-b border-gray-200">Profesyonel mutfaklar, restoranlar</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-end">
+                        <a href="#" class="flex items-center text-primary hover:text-red-700">
+                            <span>Yangın Söndürücü Kullanım Kılavuzunu İndir</span>
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-download-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tahliye Planları -->
+            <section id="tahliye-planlari" class="mb-12 bg-white rounded shadow-sm overflow-hidden">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h2 class="text-2xl font-semibold flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center mr-3">
+                            <i class="ri-route-line ri-lg"></i>
+                        </div>
+                        Tahliye Planları
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row gap-6 mb-6">
+                        <div class="md:w-1/2">
+                            <p class="text-gray-700 mb-4">Etkili bir tahliye planı, yangın durumunda hayat kurtarabilir. Her ev ve işyeri için kapsamlı bir tahliye planı hazırlanmalı ve düzenli olarak tatbikat yapılmalıdır.</p>
+                            
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Tahliye Planı Hazırlama Adımları:</h3>
+                            <ol class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">1</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium text-gray-800">Bina Planı Çizin</span>
+                                        <p class="text-gray-700 text-sm mt-1">Her katın planını çizin ve tüm odaları, kapıları ve pencereleri işaretleyin.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">2</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium text-gray-800">Kaçış Yollarını Belirleyin</span>
+                                        <p class="text-gray-700 text-sm mt-1">Her odadan en az iki kaçış yolu belirleyin ve planda işaretleyin.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">3</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium text-gray-800">Buluşma Noktası Belirleyin</span>
+                                        <p class="text-gray-700 text-sm mt-1">Binadan güvenli bir mesafede buluşma noktası belirleyin.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">4</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium text-gray-800">Sorumlulukları Dağıtın</span>
+                                        <p class="text-gray-700 text-sm mt-1">Aile üyeleri veya çalışanlar arasında görev dağılımı yapın.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5 bg-primary text-white rounded-full flex-shrink-0">
+                                        <span class="text-sm">5</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium text-gray-800">Tatbikat Yapın</span>
+                                        <p class="text-gray-700 text-sm mt-1">Düzenli aralıklarla tahliye tatbikatı yaparak planı test edin.</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="bg-gray-100 p-4 rounded h-64 flex items-center justify-center">
+                                <img src="https://readdy.ai/api/search-image?query=A%20detailed%20floor%20plan%20showing%20a%20home%20or%20office%20evacuation%20plan%20with%20clearly%20marked%20emergency%20exits%2C%20escape%20routes%20with%20arrows%2C%20fire%20extinguisher%20locations%2C%20and%20assembly%20points.%20The%20image%20should%20be%20clean%2C%20professional%20and%20easy%20to%20understand%20as%20an%20educational%20resource.&width=600&height=400&seq=6&orientation=landscape" alt="Örnek tahliye planı" class="max-w-full max-h-full object-contain">
+                            </div>
+                            
+                            <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
+                                <h4 class="font-semibold text-gray-800 mb-2">Özel Durumlar İçin Planlama</h4>
+                                <p class="text-gray-700">Yaşlılar, bebekler, engelli bireyler veya evcil hayvanlar için özel tahliye prosedürleri geliştirin. Bu kişilerin tahliyesinden kimin sorumlu olacağını önceden belirleyin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 border-t border-gray-200 pt-6">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Tahliye İşaretleri ve Anlamları</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="bg-gray-50 p-4 rounded flex items-center">
+                                <div class="w-12 h-12 flex items-center justify-center mr-3 bg-green-500 text-white rounded">
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-door-open-line ri-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Acil Çıkış</h4>
+                                    <p class="text-sm text-gray-600">En yakın güvenli çıkışı gösterir</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded flex items-center">
+                                <div class="w-12 h-12 flex items-center justify-center mr-3 bg-green-500 text-white rounded">
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-arrow-right-line ri-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Yön İşareti</h4>
+                                    <p class="text-sm text-gray-600">Çıkış yönünü gösterir</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded flex items-center">
+                                <div class="w-12 h-12 flex items-center justify-center mr-3 bg-green-500 text-white rounded">
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-stairs-line ri-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Acil Çıkış Merdiveni</h4>
+                                    <p class="text-sm text-gray-600">Tahliye merdivenini gösterir</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded flex items-center">
+                                <div class="w-12 h-12 flex items-center justify-center mr-3 bg-red-500 text-white rounded">
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-fire-extinguisher-line ri-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Yangın Söndürücü</h4>
+                                    <p class="text-sm text-gray-600">Söndürücü konumunu gösterir</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded flex items-center">
+                                <div class="w-12 h-12 flex items-center justify-center mr-3 bg-red-500 text-white rounded">
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-alarm-warning-line ri-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Yangın Alarmı</h4>
+                                    <p class="text-sm text-gray-600">Alarm butonunu gösterir</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded flex items-center">
+                                <div class="w-12 h-12 flex items-center justify-center mr-3 bg-blue-500 text-white rounded">
+                                    <div class="w-8 h-8 flex items-center justify-center">
+                                        <i class="ri-group-line ri-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Toplanma Alanı</h4>
+                                    <p class="text-sm text-gray-600">Buluşma noktasını gösterir</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-end">
+                        <a href="#" class="flex items-center text-primary hover:text-red-700">
+                            <span>Tahliye Planı Şablonunu İndir</span>
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-download-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Özel Durumlar -->
+            <section id="ozel-durumlar" class="mb-12 bg-white rounded shadow-sm overflow-hidden">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h2 class="text-2xl font-semibold flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center mr-3">
+                            <i class="ri-alert-line ri-lg"></i>
+                        </div>
+                        Özel Durumlarda Yangın Güvenliği
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 mb-6">Farklı yangın türleri ve özel durumlar için spesifik güvenlik önlemleri ve müdahale yöntemleri bulunmaktadır. Aşağıda en yaygın özel durumlar için bilgiler verilmiştir:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white border border-gray-200 rounded shadow-sm overflow-hidden">
+                            <div class="bg-amber-500 text-white px-4 py-3">
+                                <h3 class="text-lg font-semibold flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                        <i class="ri-kitchen-line"></i>
+                                    </div>
+                                    Mutfak Yangınları
+                                </h3>
+                            </div>
+                            <div class="p-4">
+                                <img src="https://readdy.ai/api/search-image?query=A%20kitchen%20fire%20safety%20image%20showing%20a%20small%20grease%20fire%20in%20a%20pan%20with%20a%20person%20safely%20handling%20it%20by%20placing%20a%20lid%20on%20the%20pan.%20The%20image%20should%20be%20educational%20and%20show%20proper%20technique%20for%20handling%20a%20kitchen%20fire.&width=500&height=300&seq=7&orientation=landscape" alt="Mutfak yangını söndürme" class="w-full h-48 object-cover rounded mb-4">
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Önleme:</h4>
+                                <ul class="space-y-1 mb-4 text-gray-700">
+                                    <li>• Pişirme sırasında mutfağı asla terk etmeyin</li>
+                                    <li>• Ocak çevresini yanıcı maddelerden temizleyin</li>
+                                    <li>• Yağ sıcaklığını kontrol edin</li>
+                                    <li>• Mutfakta yangın battaniyesi bulundurun</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Müdahale:</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• Yağ yangınlarına asla su dökmeyin</li>
+                                    <li>• Tavaları metal kapakla kapatın</li>
+                                    <li>• Sınıf F yangın söndürücü veya yangın battaniyesi kullanın</li>
+                                    <li>• Ocağı kapatın ve oksijen girişini engelleyin</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-200 rounded shadow-sm overflow-hidden">
+                            <div class="bg-blue-500 text-white px-4 py-3">
+                                <h3 class="text-lg font-semibold flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                        <i class="ri-plug-line"></i>
+                                    </div>
+                                    Elektrik Yangınları
+                                </h3>
+                            </div>
+                            <div class="p-4">
+                                <img src="https://readdy.ai/api/search-image?query=An%20electrical%20fire%20safety%20image%20showing%20an%20electrical%20panel%20or%20outlet%20with%20visible%20sparks%20or%20smoke%2C%20with%20a%20person%20safely%20using%20a%20CO2%20fire%20extinguisher%20from%20a%20safe%20distance.%20The%20image%20should%20be%20educational%20and%20demonstrate%20proper%20electrical%20fire%20response.&width=500&height=300&seq=8&orientation=landscape" alt="Elektrik yangını söndürme" class="w-full h-48 object-cover rounded mb-4">
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Önleme:</h4>
+                                <ul class="space-y-1 mb-4 text-gray-700">
+                                    <li>• Elektrik tesisatını düzenli kontrol ettirin</li>
+                                    <li>• Prizleri aşırı yüklemeyin</li>
+                                    <li>• Hasarlı kabloları hemen değiştirin</li>
+                                    <li>• Elektrikli cihazları temiz ve bakımlı tutun</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Müdahale:</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• Önce elektriği kesin</li>
+                                    <li>• Sınıf C yangın söndürücü (CO₂) kullanın</li>
+                                    <li>• Asla su kullanmayın</li>
+                                    <li>• Elektrik panolarına müdahale ederken yalıtkan eldiven kullanın</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-200 rounded shadow-sm overflow-hidden">
+                            <div class="bg-green-500 text-white px-4 py-3">
+                                <h3 class="text-lg font-semibold flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                        <i class="ri-home-line"></i>
+                                    </div>
+                                    Isıtıcı ve Soba Yangınları
+                                </h3>
+                            </div>
+                            <div class="p-4">
+                                <img src="https://readdy.ai/api/search-image?query=A%20home%20heating%20safety%20image%20showing%20a%20space%20heater%20or%20stove%20with%20proper%20clearance%20from%20flammable%20materials.%20The%20image%20should%20demonstrate%20safe%20heating%20practices%20in%20a%20home%20setting%20with%20good%20lighting%20and%20clear%20details.&width=500&height=300&seq=9&orientation=landscape" alt="Isıtıcı güvenliği" class="w-full h-48 object-cover rounded mb-4">
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Önleme:</h4>
+                                <ul class="space-y-1 mb-4 text-gray-700">
+                                    <li>• Isıtıcıları yanıcı maddelerden en az 1 metre uzakta tutun</li>
+                                    <li>• Bacaları düzenli temizletin</li>
+                                    <li>• Isıtıcıları düz yüzeylere yerleştirin</li>
+                                    <li>• Uyurken ısıtıcıları kapatın</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Müdahale:</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• Elektrikli ısıtıcıların fişini çekin</li>
+                                    <li>• Uygun yangın söndürücü kullanın</li>
+                                    <li>• Baca yangınlarında itfaiyeyi arayın</li>
+                                    <li>• Sobanın hava girişini kapatın</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-200 rounded shadow-sm overflow-hidden">
+                            <div class="bg-purple-500 text-white px-4 py-3">
+                                <h3 class="text-lg font-semibold flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                        <i class="ri-flask-line"></i>
+                                    </div>
+                                    Kimyasal Yangınlar
+                                </h3>
+                            </div>
+                            <div class="p-4">
+                                <img src="https://readdy.ai/api/search-image?query=A%20chemical%20fire%20safety%20image%20showing%20proper%20storage%20of%20chemical%20containers%20in%20a%20laboratory%20or%20industrial%20setting%20with%20clear%20safety%20labels%20and%20separation%20of%20incompatible%20chemicals.%20The%20image%20should%20be%20educational%20and%20demonstrate%20proper%20chemical%20safety%20practices.&width=500&height=300&seq=10&orientation=landscape" alt="Kimyasal güvenlik" class="w-full h-48 object-cover rounded mb-4">
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Önleme:</h4>
+                                <ul class="space-y-1 mb-4 text-gray-700">
+                                    <li>• Kimyasalları etiketlerine göre saklayın</li>
+                                    <li>• Uyumsuz kimyasalları ayrı tutun</li>
+                                    <li>• İyi havalandırma sağlayın</li>
+                                    <li>• Güvenlik bilgi formlarını (MSDS) bulundurun</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mb-2">Müdahale:</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• Kimyasal türüne uygun söndürücü kullanın</li>
+                                    <li>• Koruyucu ekipman olmadan müdahale etmeyin</li>
+                                    <li>• Buharları solumaktan kaçının</li>
+                                    <li>• Tehlikeli kimyasal yangınlarında alanı tahliye edin</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-6">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Özel Gruplar İçin Yangın Güvenliği</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-user-heart-line"></i>
+                                    </div>
+                                    Yaşlılar ve Engelliler
+                                </h4>
+                                <ul class="space-y-2 ml-8 text-gray-700">
+                                    <li>Kişiselleştirilmiş tahliye planları hazırlayın</li>
+                                    <li>Görsel ve işitsel alarm sistemleri kurun</li>
+                                    <li>Yardım edecek kişileri önceden belirleyin</li>
+                                    <li>Kolay erişilebilir acil durum ekipmanları bulundurun</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                        <i class="ri-parent-line"></i>
+                                    </div>
+                                    Çocuklar
+                                </h4>
+                                <ul class="space-y-2 ml-8 text-gray-700">
+                                    <li>Yangın güvenliği eğitimi verin</li>
+                                    <li>Kibrit ve çakmakları erişemeyecekleri yerlerde saklayın</li>
+                                    <li>Tahliye tatbikatlarını oyun şeklinde yapın</li>
+                                    <li>"Dur, Yat, Yuvarlan" tekniğini öğretin</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-end">
+                        <a href="#" class="flex items-center text-primary hover:text-red-700">
+                            <span>Özel Durumlar Rehberini İndir</span>
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-download-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Kaynaklar ve İletişim -->
+            <section class="bg-white rounded shadow-sm overflow-hidden">
+                <div class="bg-gray-800 text-white px-6 py-4">
+                    <h2 class="text-2xl font-semibold flex items-center">
+                        <div class="w-8 h-8 flex items-center justify-center mr-3">
+                            <i class="ri-links-line ri-lg"></i>
+                        </div>
+                        Kaynaklar ve İletişim
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Faydalı Kaynaklar</h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#" class="flex items-center text-primary hover:text-red-700">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                            <i class="ri-file-pdf-line"></i>
+                                        </div>
+                                        <span>Kapsamlı Yangın Güvenliği Rehberi (PDF)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center text-primary hover:text-red-700">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                            <i class="ri-file-pdf-line"></i>
+                                        </div>
+                                        <span>Ev Yangın Güvenliği Kontrol Listesi (PDF)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center text-primary hover:text-red-700">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                            <i class="ri-file-pdf-line"></i>
+                                        </div>
+                                        <span>İşyeri Yangın Güvenliği Kontrol Listesi (PDF)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center text-primary hover:text-red-700">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                            <i class="ri-video-line"></i>
+                                        </div>
+                                        <span>Yangın Söndürücü Kullanım Videosu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center text-primary hover:text-red-700">
+                                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                            <i class="ri-video-line"></i>
+                                        </div>
+                                        <span>Tahliye Tatbikatı Eğitim Videosu</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Acil Durum İletişim Bilgileri</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-center">
+                                    <div class="w-10 h-10 flex items-center justify-center mr-3 bg-red-100 text-primary rounded-full">
+                                        <i class="ri-phone-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-600">İtfaiye</span>
+                                        <p class="font-semibold text-gray-800">110</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-10 h-10 flex items-center justify-center mr-3 bg-red-100 text-primary rounded-full">
+                                        <i class="ri-phone-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-600">Acil Çağrı Merkezi</span>
+                                        <p class="font-semibold text-gray-800">112</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-10 h-10 flex items-center justify-center mr-3 bg-red-100 text-primary rounded-full">
+                                        <i class="ri-phone-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-600">Polis İmdat</span>
+                                        <p class="font-semibold text-gray-800">155</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-10 h-10 flex items-center justify-center mr-3 bg-red-100 text-primary rounded-full">
+                                        <i class="ri-phone-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-600">Sağlık Yardım</span>
+                                        <p class="font-semibold text-gray-800">112</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Yangın Güvenliği Danışmanlığı</h3>
+                        <p class="text-gray-700 mb-4">Ev veya işyeriniz için profesyonel yangın güvenliği değerlendirmesi ve danışmanlık hizmeti almak isterseniz, aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.</p>
+                        
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Ad Soyad</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-posta</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Konum</label>
+                                <input type="text" id="location" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary focus:border-primary">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mesaj</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-primary focus:border-primary"></textarea>
+                            </div>
+                            <div class="md:col-span-2 flex justify-end">
+                                <button type="submit" class="bg-primary text-white py-2 px-6 rounded-button hover:bg-red-700 transition duration-200 whitespace-nowrap">Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-arrow-up-line ri-lg"></i>
+        </div>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="https://readdy.ai/home/ff76124c-c8d2-40e3-9232-49fc71c83c57/5eb09d93-0072-41b8-a6fe-0e379f6470c3" data-readdy="true" class="text-xl font-['Pacifico'] text-white">logo</a>
+                    <p class="mt-2 text-gray-400">Yangın güvenliği hakkında kapsamlı bilgiler</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <div class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <div class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full">
+                            <i class="ri-twitter-x-fill ri-lg"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <div class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <div class="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-full">
+                            <i class="ri-youtube-fill ri-lg"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>© 2025 Yangın Güvenliği Rehberi. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="languageSelectorScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelector = document.getElementById('languageSelector');
+            const languageMenu = document.getElementById('languageMenu');
+            
+            languageSelector.addEventListener('click', function() {
+                languageMenu.classList.toggle('hidden');
+            });
+            
+            document.addEventListener('click', function(event) {
+                if (!languageSelector.contains(event.target) && !languageMenu.contains(event.target)) {
+                    languageMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+    <script id="backToTopScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script id="smoothScrollScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
