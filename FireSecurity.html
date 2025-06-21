@@ -28,6 +28,12 @@
         .border-danger {
             border-color: #e53e3e;
         }
+        .nav-link-active {
+            color: #e53e3e !important;
+            font-weight: 600;
+            background-color: rgba(229, 62, 62, 0.1);
+            border-radius: 4px;
+        }
     </style>
     <script>tailwind.config={theme:{extend:{colors:{primary:'#e53e3e',secondary:'#f6ad55'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 </head>
@@ -98,7 +104,7 @@
                 <nav>
                     <ul class="space-y-2">
                         <li>
-                            <a href="#risk-degerlendirmesi" class="flex items-center text-gray-700 hover:text-primary py-1">
+                            <a href="#risk-degerlendirmesi" class="flex items-center text-gray-700 hover:text-primary py-2 px-3 rounded transition-colors duration-200">
                                 <div class="w-6 h-6 flex items-center justify-center mr-2">
                                     <i class="ri-clipboard-line"></i>
                                 </div>
@@ -106,7 +112,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#onlemler" class="flex items-center text-gray-700 hover:text-primary py-1">
+                            <a href="#onlemler" class="flex items-center text-gray-700 hover:text-primary py-2 px-3 rounded transition-colors duration-200">
                                 <div class="w-6 h-6 flex items-center justify-center mr-2">
                                     <i class="ri-shield-check-line"></i>
                                 </div>
@@ -114,7 +120,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#yangin-aninda" class="flex items-center text-gray-700 hover:text-primary py-1">
+                            <a href="#yangin-aninda" class="flex items-center text-gray-700 hover:text-primary py-2 px-3 rounded transition-colors duration-200">
                                 <div class="w-6 h-6 flex items-center justify-center mr-2">
                                     <i class="ri-fire-line"></i>
                                 </div>
@@ -122,7 +128,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#yangin-sondurucu" class="flex items-center text-gray-700 hover:text-primary py-1">
+                            <a href="#yangin-sondurucu" class="flex items-center text-gray-700 hover:text-primary py-2 px-3 rounded transition-colors duration-200">
                                 <div class="w-6 h-6 flex items-center justify-center mr-2">
                                     <i class="ri-fire-extinguisher-line"></i>
                                 </div>
@@ -130,7 +136,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#tahliye-planlari" class="flex items-center text-gray-700 hover:text-primary py-1">
+                            <a href="#tahliye-planlari" class="flex items-center text-gray-700 hover:text-primary py-2 px-3 rounded transition-colors duration-200">
                                 <div class="w-6 h-6 flex items-center justify-center mr-2">
                                     <i class="ri-route-line"></i>
                                 </div>
@@ -138,7 +144,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#ozel-durumlar" class="flex items-center text-gray-700 hover:text-primary py-1">
+                            <a href="#ozel-durumlar" class="flex items-center text-gray-700 hover:text-primary py-2 px-3 rounded transition-colors duration-200">
                                 <div class="w-6 h-6 flex items-center justify-center mr-2">
                                     <i class="ri-alert-line"></i>
                                 </div>
@@ -1323,6 +1329,72 @@
                         });
                     }
                 });
+            });
+        });
+    </script>
+
+    <script id="scrollSpyScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // İçindekiler menüsündeki tüm linkleri al
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            const sections = [];
+            
+            // Her link için ilgili section'ı bul ve diziye ekle
+            navLinks.forEach(link => {
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    sections.push({
+                        link: link,
+                        section: targetSection,
+                        id: targetId
+                    });
+                }
+            });
+            
+            // Aktif linki güncelle
+            function updateActiveLink() {
+                const scrollPosition = window.pageYOffset + 100; // Header yüksekliğini hesaba kat
+                
+                let activeSection = null;
+                
+                // Hangi section'ın görünür olduğunu bul
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i].section;
+                    const sectionTop = section.offsetTop;
+                    
+                    if (scrollPosition >= sectionTop) {
+                        activeSection = sections[i];
+                        break;
+                    }
+                }
+                
+                // Tüm linklerin aktif sınıfını kaldır
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-link-active');
+                    link.classList.add('text-gray-700');
+                });
+                
+                // Aktif section varsa, ilgili linki vurgula
+                if (activeSection) {
+                    activeSection.link.classList.add('nav-link-active');
+                    activeSection.link.classList.remove('text-gray-700');
+                }
+            }
+            
+            // Sayfa yüklendiğinde ve scroll edildiğinde aktif linki güncelle
+            updateActiveLink();
+            
+            // Scroll event listener - performans için throttle ekle
+            let isScrolling = false;
+            window.addEventListener('scroll', function() {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function() {
+                        updateActiveLink();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
             });
         });
     </script>
